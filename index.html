@@ -29,7 +29,7 @@
   <div class="wrap nav-in">
     <!-- Logo: markup copied verbatim from the LaunchRiot sibling site (main-site-v2) -->
     <a aria-label="LaunchRiot home" href="#top" class="lr-logo"><span class="lr-mark"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-workflow" aria-hidden="true"><rect width="8" height="8" x="3" y="3" rx="2"></rect><path d="M7 11v4a2 2 0 0 0 2 2h4"></path><rect width="8" height="8" x="13" y="13" rx="2"></rect></svg></span><span class="lr-word">launch<span class="lr-accent">riot</span></span></a>
-    <nav class="links"><a href="#/app">Try the demo</a><a href="#request">Request a demo</a></nav>
+    <nav class="links"><a href="app.html#/app/dashboard">Try the demo</a><a href="#request">Request a demo</a></nav>
     <a class="btn btn-primary btn-sm" href="#request">Request a demo</a>
   </div>
 </header>
@@ -41,31 +41,10 @@
       <h1>Your whole day.<br><span class="accent">One dashboard.</span></h1>
       <p class="sub">For managing directors and general managers. Calendar, inbox, WhatsApp, tasks, sales and pipeline in one place, with an AI assistant that drafts and waits for your approval.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="#/app">Try the demo</a>
+        <a class="btn btn-primary" href="app.html#/app/dashboard">Try the demo</a>
         <a class="btn btn-ghost" href="#request">Request a demo</a>
       </div>
       <p class="fine">Demo only. No real accounts are connected and no messages are sent. All people, companies and figures are fictional.</p>
-    </div>
-  </section>
-
-  <section class="sec-demo" id="demo">
-    <div class="wrap">
-      <div class="demo-head">
-        <div>
-          <a class="mono accent back-site" href="#top">&larr; Back to site</a>
-          <h2>Good morning, Alex.</h2>
-          <p class="muted-p" id="today"></p>
-        </div>
-        <span class="tag">Sample data</span>
-      </div>
-
-      <div class="card connect">
-        <div class="card-h"><h3>Connect your accounts</h3><button class="lnk" id="connect-all">Connect all (demo)</button></div>
-        <p class="note">Clicking simulates a connection. No sign-in, no real OAuth, no data leaves this page.</p>
-        <div class="conn-grid" id="conn"></div>
-      </div>
-
-      <div class="dash" id="dash"></div>
     </div>
   </section>
 
@@ -120,15 +99,7 @@
     </div>
   </div>
 </footer>
-<div id="toast" role="status"></div>
-<script src="data.js"></script>
-<script src="app.js"></script>
+
 <script src="script.js"></script>
-<script>
-// Full-screen demo view: #/app shows only the dashboard, connected by default.
-(function(){var first=true;function route(){var on=location.hash.indexOf("#/app")===0;document.body.classList.toggle("app",on);
-if(on){if(first&&window.LRX){window.SAMPLE.sources.forEach(function(s){window.LRX.con[s.k]=true});window.LRX.render();first=false}window.scrollTo(0,0)}}
-window.addEventListener("hashchange",route);route();})();
-</script>
 </body>
 </html>
