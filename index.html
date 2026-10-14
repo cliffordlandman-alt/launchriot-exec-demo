@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#101216" />
+<title>LaunchRiot for Executives | One dashboard for your day</title>
+<meta name="description" content="A simple demo for managing directors and general managers: calendar, inbox, WhatsApp, tasks, sales, pipeline and a daily brief in one dashboard. Everything waits for your approval. Sample data only." />
+<meta property="og:site_name" content="LaunchRiot" />
+<meta property="og:title" content="LaunchRiot for Executives" />
+<meta property="og:description" content="Your day, inbox, WhatsApp, sales and pipeline in one dashboard. Approve before anything is sent. Demo with sample data." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://cliffordlandman-alt.github.io/launchriot-exec-demo/" />
+<meta property="og:image" content="https://cliffordlandman-alt.github.io/launchriot-exec-demo/og-image.png" />
+<meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="LaunchRiot for Executives: one dashboard for your day" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="LaunchRiot for Executives" />
+<meta name="twitter:description" content="Your day, inbox, WhatsApp, sales and pipeline in one dashboard. Approve before anything is sent." />
+<meta name="twitter:image" content="https://cliffordlandman-alt.github.io/launchriot-exec-demo/og-image.png" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="banner">Demo · fictional sample data · nothing is sent, connected or charged</div>
+<header class="nav">
+  <div class="wrap nav-in">
+    <!-- Logo: markup copied verbatim from the LaunchRiot sibling site (main-site-v2) -->
+    <a aria-label="LaunchRiot home" href="#top" class="lr-logo"><span class="lr-mark"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-workflow" aria-hidden="true"><rect width="8" height="8" x="3" y="3" rx="2"></rect><path d="M7 11v4a2 2 0 0 0 2 2h4"></path><rect width="8" height="8" x="13" y="13" rx="2"></rect></svg></span><span class="lr-word">launch<span class="lr-accent">riot</span></span></a>
+    <nav class="links"><a href="#demo">Demo</a><a href="#request">Request a demo</a></nav>
+    <a class="btn btn-primary btn-sm" href="#request">Request a demo</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <span class="pill"><span class="dot"></span>LaunchRiot for Executives</span>
+      <h1>Your whole day.<br><span class="accent">One dashboard.</span></h1>
+      <p class="sub">For managing directors and general managers. Calendar, inbox, WhatsApp, tasks, sales and pipeline in one place, with an AI assistant that drafts and waits for your approval.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#request">Request a demo</a>
+        <a class="btn btn-ghost" href="#demo">Try the demo</a>
+      </div>
+      <p class="fine">Demo only. No real accounts are connected and no messages are sent. All people, companies and figures are fictional.</p>
+    </div>
+  </section>
+
+  <section class="sec-demo" id="demo">
+    <div class="wrap">
+      <div class="demo-head">
+        <div>
+          <span class="mono accent">Try the demo</span>
+          <h2>Good morning, Alex.</h2>
+          <p class="muted-p" id="today"></p>
+        </div>
+        <span class="tag">Sample data</span>
+      </div>
+
+      <div class="card connect">
+        <div class="card-h"><h3>Connect your accounts</h3><button class="lnk" id="connect-all">Connect all (demo)</button></div>
+        <p class="note">Clicking simulates a connection. No sign-in, no real OAuth, no data leaves this page.</p>
+        <div class="conn-grid" id="conn"></div>
+      </div>
+
+      <div class="dash" id="dash"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="request">
+    <div class="wrap req-grid">
+      <div>
+        <span class="mono accent">Request a demo</span>
+        <h2>See it set up around your day.</h2>
+        <p class="muted-p">Tell us about your business and how your day runs. We’ll walk you through a demo and confirm what happens next.</p>
+        <ul class="ticks">
+          <li>A walkthrough built around your role</li>
+          <li>Scope and quote agreed before any work</li>
+          <li>Reply on WhatsApp or email</li>
+        </ul>
+        <p class="muted-p small">Prefer to write directly? <a href="mailto:hello@launchriot.online">hello@launchriot.online</a></p>
+      </div>
+      <form id="demo-form" class="form" novalidate>
+        <div class="f2">
+          <label>Name<input name="fullName" autocomplete="name" required></label>
+          <label>Business name<input name="companyName" autocomplete="organization" required></label>
+        </div>
+        <label>Industry<input name="industry" placeholder="e.g. Property, Hospitality, Trading" required></label>
+        <div class="f2">
+          <label>WhatsApp number<input name="phone" type="tel" autocomplete="tel" placeholder="+971 …"></label>
+          <label>Email<input name="email" type="email" autocomplete="email" placeholder="you@business.com"></label>
+        </div>
+        <p class="hint">Add a WhatsApp number or an email (or both).</p>
+        <label>Message <em>(optional)</em><textarea name="notes" rows="3" placeholder="What takes up most of your day?"></textarea></label>
+        <input type="text" name="website_hp" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <p class="err" id="form-err" role="alert"></p>
+        <button class="btn btn-primary btn-full" type="submit" id="submit-btn">Request a demo</button>
+        <div class="done" id="form-done" hidden>
+          <b id="done-title">Thanks, your demo request is in.</b>
+          <p id="done-msg">We’ll review it and get back to you.</p>
+          <div class="cta-row" id="done-actions"></div>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <a aria-label="LaunchRiot home" href="#top" class="lr-logo"><span class="lr-mark"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-workflow" aria-hidden="true"><rect width="8" height="8" x="3" y="3" rx="2"></rect><path d="M7 11v4a2 2 0 0 0 2 2h4"></path><rect width="8" height="8" x="13" y="13" rx="2"></rect></svg></span><span class="lr-word">launch<span class="lr-accent">riot</span></span></a>
+      <p>LaunchRiot for Executives · demo with fictional sample data. © 2026 LaunchRiot</p>
+    </div>
+    <div class="foot-links">
+      <a href="https://launchriot.online" target="_blank" rel="noopener">launchriot.online</a>
+      <a href="https://cliffordlandman-alt.github.io/launchriot-demo/" target="_blank" rel="noopener">Business demo</a>
+      <a href="mailto:hello@launchriot.online">hello@launchriot.online</a>
+    </div>
+  </div>
+</footer>
+<div id="toast" role="status"></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
