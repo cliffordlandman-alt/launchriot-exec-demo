@@ -126,3 +126,8 @@ textarea{width:100%;font:inherit;font-size:14px;color:var(--cream);background:va
   .dash,.conn-grid,.mkt,.f2{grid-template-columns:1fr}.span2{grid-column:auto}.dash{gap:14px}
   .card{padding:16px}.kpis b{font-size:18px}.form{padding:22px}
 }
+
+/* Full-screen demo view */
+body.app .hero,body.app #request,body.app .foot{display:none}
+body.app .sec-demo{min-height:100vh;border-top:0}
+.back-site{text-decoration:none}
